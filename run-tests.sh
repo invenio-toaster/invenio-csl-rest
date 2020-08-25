@@ -28,5 +28,5 @@ pydocstyle invenio_csl_rest && \
 isort -rc -c -df **/*.py && \
 check-manifest --ignore ".travis-*,docs/_build*" && \
 sphinx-build -qnNW docs docs/_build/html && \
-python setup.py test && \
+python -m pytest && \
 sphinx-build -qnNW -b doctest docs docs/_build/doctest
